@@ -18,8 +18,6 @@ app.use(
   })
 );
 
-console.log(process.env.FRONTEND_URL);
-
 // using routers
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/tasks", taskRouter);
