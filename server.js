@@ -11,3 +11,6 @@ connectMongoDB();
 app.listen(PORT, () => {
   console.log(`Server running at PORT : ${PORT}`);
 });
+
+console.log(process.env.FRONTEND_URL);
+console.log(process.env.MongoDB_URL);

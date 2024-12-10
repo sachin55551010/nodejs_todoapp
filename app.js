@@ -12,11 +12,13 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL || "http://localhost:5173"],
+    origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
+console.log(process.env.FRONTEND_URL);
 
 // using routers
 app.use("/api/v1/users", userRouter);
